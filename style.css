@@ -1,0 +1,512 @@
+/* General Styling */
+:root {
+    --primary-color: #1e3a5f; /* โทนสีน้ำเงินเข้มขึ้น */
+    --secondary-color: #2c3e50; /* สีเทาเข้มแบบโมเดิร์น */
+    --background-color: transparent;
+    --text-color: #1e3a5f;
+    --nav-bg-color:#d35400; /* สีส้มอิฐแทนสีแดง */
+    --nav-hover-color: #d35400; /* สีส้มสดใส */
+    --button-bg: #1e3a5f;
+    --button-hover: #162c46;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'TH Sarabun New', sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Image/background.jpg/—Pngtree—web\ site\ template\ business\ design_484212.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* ใช้ฟอนต์ Roboto สำหรับเนื้อหาทั้งหมด */
+body {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.3px;  /* ปรับระยะห่างระหว่างตัวอักษร */
+    line-height: 1.6;       /* ปรับระยะห่างระหว่างบรรทัด */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(177, 102, 102, 0.9); /* เพิ่มความโปร่งแสงให้พื้นหลัง */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ปรับขนาด h1 */
+h1 {
+    font-size: 36px;  /* ขนาดตัวอักษร */
+    font-weight: bold; /* ทำให้ตัวหนา */
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+    color: #333; /* สีตัวอักษร */
+    margin: 10px 0; /* ระยะห่างบน-ล่าง */
+}
+
+
+/* ปรับแต่งส่วน Header */
+header {
+    width: 100%;
+    text-align: center;
+    background-color:rgb(165, 85, 85); /* สามารถลบหรือเปลี่ยนสีพื้นหลังได้ */
+    padding: 0;
+}
+
+.banner {
+    width:100%;
+    max-width: 1520px; /* ปรับขนาดตามต้องการ */
+    height:auto;
+    object-fit: cover; /* ปรับภาพให้เต็มพื้นที่โดยไม่เสียสัดส่วน */
+    display: block;
+    margin: 0 auto;
+}
+
+/* เมนูนำทางแบบไอคอน */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* ระยะห่างระหว่างไอคอน */
+    padding: 10px 0;
+    list-style: none;
+    background-color:crimson; /* สีพื้นหลังเมนู */
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px; /* ปรับขนาดปุ่ม */
+    height: 30px;
+    border-radius: 60%;
+    background-color:crimson; /* เพิ่มพื้นหลังให้ไอคอนชัดขึ้น */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ปรับขนาดไอคอนให้พอดี */
+.nav-btn img {
+    width: 150px; /* ปรับขนาดไอคอน */
+    height: 200px;
+    object-fit: contain;
+}
+
+/* เอฟเฟกต์โฮเวอร์ */
+.nav-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+/* Navigation Styling */
+nav {
+    width: 100%;
+    background-color: var(--nav-bg-color);
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 12px 25px;
+    background: var(--button-bg);
+    border-radius: 30px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background: var(--button-hover);
+    transform: scale(1.1);
+}
+
+/* สไตล์ปุ่มย้อนกลับ */
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color:teal;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 17px; /* ปรับให้ปุ่มห่างจากหัวข้อ */
+}
+
+.back-button svg {
+    margin-right: 8px; /* ระยะห่างระหว่างไอคอนและข้อความ */
+}
+
+.back-button:hover {
+    background-color: #45a049; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* ปรับแต่งปุ่มประเพณี */
+.tradition-button {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--button-bg);
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+}
+
+.tradition-button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+.tradition-button:active {
+    transform: scale(0.98); /* ทำให้ปุ่มยุบลงเมื่อตัวเลือกถูกคลิก */
+}
+
+.tradition-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.5); /* เพิ่มเงาขณะปุ่มได้รับการโฟกัส */
+}
+
+.tradition-button span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: block;
+}
+
+/* สไตล์พื้นฐานสำหรับ .tradition-detail */
+.tradition-detail {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f8e9e9;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+/* ชื่อหัวข้อประเพณี */
+.tradition-detail h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #004d40;
+    margin: 0 0 25px 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* เนื้อหาของประเพณี */
+.tradition-detail p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ลิงก์ภายในรายละเอียด */
+.tradition-detail a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* เปลี่ยนสีลิงก์เมื่อ hover */
+.tradition-detail a:hover {
+    color: #ff7043;
+    transform: translateY(-3px);
+}
+
+/* รูปภาพในรายละเอียด */
+.tradition-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 30px 0;
+}
+
+/* Main Section Styling */
+main {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+main ul {
+    padding-left: 30px;
+}
+
+main ul li {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+form button {
+    background-color: var(--button-bg);
+    color: white;
+    font-size: 1.2rem;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* ช่องค้นหา */
+.search-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* สไตล์ของช่องค้นหา */
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px; /* ใช้ padding ปกติ */
+    font-size: 1.2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px; /* ความโค้งที่พอเหมาะ */
+    outline: none;
+    background-color: #f4f4f4; /* สีพื้นหลังที่ให้ความรู้สึกเป็นทางการ */
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* สไตล์เมื่อช่องค้นหาถูกเลือก */
+#search-input:focus {
+    border-color: var(--nav-hover-color);
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.5); /* ใส่เงาให้ดูเป็นทางการ */
+}
+
+/* ปุ่มค้นหา */
+#search-button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px; /* ใช้ขอบโค้งเหมือนกับช่องค้นหา */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase; /* ทำให้ตัวหนังสือในปุ่มเป็นตัวพิมพ์ใหญ่ */
+}
+
+#search-button:hover {
+    background-color: var(--nav-hover-color);
+    transform: scale(1.05); /* เพิ่มการขยายขนาดปุ่มเมื่อ hover */
+}
+
+#search-button:focus {
+    outline: none; /* ป้องกันไม่ให้มีขอบเส้นเมื่อคลิก */
+}
+
+/* รูปแบบมือถือ */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #search-input {
+        margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างช่องค้นหากับปุ่ม */
+    }
+}
+
+/* สไตล์ปุ่มโซเชียล */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* ระยะห่างระหว่างไอคอน */
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* เอฟเฟกต์โฮเวอร์ */
+.social-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* สีพื้นหลังของไอคอนแต่ละอัน */
+.facebook {
+    background-color: #1877F2; /* สีของ Facebook */
+}
+
+.line {
+    background-color: #06C755; /* สีของ Line */
+}
+
+/* Footer Styling */
+footer {
+    width: 100%; /* ยืดเต็มหน้าจอ */
+    margin: 0;   /* ไม่มีระยะห่างซ้ายขวา */
+    padding: 20px 0; /* กำหนดระยะห่างบนและล่าง */
+    background-color: #333; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 25px;
+    }
+}
+
+/* เพิ่มความสูงให้เนื้อหาทั้งหมดเพื่อให้ footer อยู่ที่ด้านล่างสุด */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ให้ main มีความยืดหยุ่นเพื่อเติมพื้นที่หากเนื้อหาน้อย */
+main {
+    flex-grow: 1;
+    padding-bottom: 50px; /* เพิ่มช่องว่างเพื่อไม่ให้ footer ติดกับเนื้อหามากเกินไป */
+}
+
+/* สร้าง flex layout สำหรับ body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ให้ความสูงของ body เต็มหน้าจอ */
+}
+
+/* ตั้งค่า footer ให้อยู่ที่ด้านล่างสุด */
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
